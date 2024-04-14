@@ -1,0 +1,92 @@
+body {
+  background-color: rgb(199, 222, 243);
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: auto;
+  width: 100%;
+  color: white;
+  font-family: Verdana;
+  font-weight: bold;
+  text-align: center;
+}
+
+.button-container h1 {
+  font-size: 50px;
+  margin-bottom: 20px; /* Reduzindo o espaçamento entre o texto e a imagem */
+}
+
+.zb1 {
+  max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
+  margin-bottom: 20px; /* Adiciona um espaçamento entre a imagem e o botão */
+}
+
+.button-wrapper {
+  z-index: 10;
+}
+
+
+.btn {
+  height: 30px;
+  width: 100px;
+  font-size: 20px;
+  margin: 10px;
+  cursor: pointer;
+  z-index: 999;
+}
+.memory-game {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+
+ 
+  margin: 0 auto;
+}
+
+.memory-card {
+  height: 200px;
+  width: 200px; 
+  perspective: 1000px;
+  position: relative;
+  transition: .5s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.container {
+padding: 40px 0;
+}
+
+
+
+
+.front-face {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
+
+.back-face {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-image: url("./zb1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  backface-visibility: hidden;
+}
+
+.flip {
+  transform: rotateY(180deg);
+}
